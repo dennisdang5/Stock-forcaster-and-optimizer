@@ -1,1 +1,1 @@
-# stock_forecaster_portfolio_optimizer
+# Stock-forecaster-and-optimizer
