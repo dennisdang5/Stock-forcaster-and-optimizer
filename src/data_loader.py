@@ -63,14 +63,20 @@ class StockDataLoader:
     """
     Save downloaded data to file
     """
-    def save_data(self, filepath= ''):
-        with open()
-        return None
+    def save_data(self):
+        filepath = 'data/raw/stock_data.pkl'
+        os.makedirs(os.path.dirname(filepath), exist_ok=True) # Makes directory if it doesn't exist
+        with open(filepath, 'wb') as f:
+            pickle.dump(self.data, f)
+        print(f'Data is saved to {filepath}')
 
     """
     Load downloaded data
     """
     def load_data(self):
+        filepath = 'data/raw/stock_data.pkl'
+        with open(filepath, 'rb') as f:
+            self.data = pickle.load(f)
         return None
 
 
